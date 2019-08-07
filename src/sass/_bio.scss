@@ -1,0 +1,25 @@
+
+#bio {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: $main-padding;
+
+    p {
+        text-align: left;
+    }
+}
+#bio-container {
+    max-width: $container-max-width;
+    width: 100%;
+    padding: $main-padding;
+}
+#bio-content {
+
+}
+#bio-image {
+    width: 300px;
+    height: 200px;
+    background-image: url(https://picsum.photos/800/600/);
+}

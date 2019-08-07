@@ -1,0 +1,110 @@
+#portfolio {
+    @extend %flexbox-center;
+    padding: $main-padding;
+}
+
+#portfolio-container {
+    @extend %container-settings;
+    
+    #porfolio-content-wrapper {
+        @extend %flexbox-center;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+    }
+}
+
+.portfolio-project {
+
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-bottom: 3em;
+
+    &:last-child {
+        margin-bottom: 0;
+    }
+
+    &-image {
+        width: 100%;
+        height: 200px;
+        margin-bottom: 20px;
+        border-radius: 15px;
+        @extend %image-center;
+        background-color: $background-black;
+        box-shadow: 2px 2px rgba(0,0,0,0.75);
+        transition-duration: 0.5s;
+        
+        @media (min-width: $tablet-width) {
+            width: 47.5%;
+            min-height: 250px;
+            margin-bottom: 0;
+        }
+    }
+
+    &-tags {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+
+        div {
+            padding: 5px 15px;
+            margin: 5px 5px;
+            border-radius: 20px;
+        }
+    }
+
+    &-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        
+        @media (min-width: $tablet-width) {
+            justify-content: space-evenly;
+            width: 47.5%;
+        }
+    }
+
+    &-links {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+
+        a {
+            padding: 5px 15px;
+            border: 2px solid $dark-blue;
+            color: $dark-blue;
+            border-radius: 20px;
+            text-align: center;
+            flex-grow: 1;
+            margin: 0 10px;
+            
+            display: flex;
+            flex-wrap: nowrap;
+            justify-content: center;
+            align-items: center;
+
+            &:hover {
+                background-color: $dark-blue;
+                color: white;
+
+                img {
+                    filter: brightness(0) invert(1);
+                }
+            }
+
+            img {
+                width: 1em;
+                height: 1em;
+                margin-right: 5px;
+                
+                &:hover {
+                    
+                }
+            }
+        }
+    }
+}

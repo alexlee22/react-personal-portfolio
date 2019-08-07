@@ -1,0 +1,48 @@
+{
+  "name": "react-personal-portfolio",
+  "version": "1.0.0",
+  "description": "A porfolio created with Parcel and React",
+  "main": "index.js",
+  "scripts": {
+    "dev": "parcel ./src/index.html",
+    "start": "parcel serve ./src/index.html --no-cache",
+    "build": "parcel build ./src/index.html/",
+    "buildGHPages": "parcel build ./src/index.html --public-url ./ --out-dir docs/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/xenria/react-personal-portfolio.git"
+  },
+  "keywords": ["portfolio", "react"],
+  "author": "Alexander Lee",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/xenria/react-personal-portfolio/issues"
+  },
+  "homepage": "https://github.com/xenria/react-personal-portfolio#readme",
+  "dependencies": {
+    "components": "^0.1.0",
+    "const": "^1.0.0",
+    "css-doodle": "^0.6.2",
+    "data": "^0.6.1",
+    "data.js": "^0.12.8",
+    "images": "^3.0.2",
+    "scrollreveal": "^4.0.5",
+    "smooth-scroll": "^16.0.3",
+    "three": "^0.106.2"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.4.3",
+    "@babel/plugin-proposal-class-properties": "^7.4.0",
+    "@babel/preset-es2016": "^7.0.0-beta.53",
+    "@babel/preset-react": "^7.0.0",
+    "babel-core": "^6.26.3",
+    "babel-preset-env": "^1.7.0",
+    "babel-preset-react": "^6.24.1",
+    "node-sass": "^4.12.0",
+    "parcel-bundler": "^1.12.3",
+    "react": "^16.8.4",
+    "react-dom": "^16.8.4",
+    "react-hot-loader": "^4.8.0"
+  }
+}

@@ -1,0 +1,99 @@
+#exp {
+    @extend %flexbox-center;
+    padding: $main-padding;
+}
+#exp-container {
+    @extend %container-settings;
+}
+
+.job-container {
+    $line-width: 5px;
+    $circle-radius: 10px;
+    $container-padding: 30px;
+
+    border-left: $line-width solid $dark-blue;
+    margin: 0 25px;
+    padding: $container-padding;
+    
+    &:first-child {
+        padding-top: 0;
+
+        .div-sphere {
+            background-color: $dark-blue;
+        }
+    }
+
+    .div-sphere{
+        position: relative;
+        left: -($container-padding + $circle-radius + 1.5 * $line-width);
+        z-index: 2;
+        border-radius: 50%;
+        width: $circle-radius*2;
+        height: $circle-radius*2;
+        
+        background-color: white;
+        border: solid $line-width $dark-blue;
+        stroke-width: $line-width;
+    }
+
+    .job-content {
+        margin-top: -(2 * $circle-radius + 2 * $line-width);
+    }
+
+}
+
+.job-container-dropoff {
+    @extend .job-container;
+    border-left-style: dashed;
+}
+.job-content-date {
+    color: rgb(100,100,100);
+}
+
+
+
+#contact {
+    background-color:$dark-blue;
+    color: white;
+    @extend %flexbox-center;   
+}
+#contact-container {
+    padding: $main-padding;
+    max-width: $container-max-width;
+    width: calc(100% - 2 * 20px);
+}
+
+#contacts-bar {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.contacts-bar-content {
+    background-color: white;
+    color:black;
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+
+
+    img {
+        width: 2em;
+        height: 2em;
+        margin-right: 1em;
+    }
+
+    p {
+        margin-bottom: 0;
+    }
+
+    @media (min-width: $tablet-width) {
+        width: auto;
+        flex-grow: 1;
+        margin: 10px;
+    }
+}

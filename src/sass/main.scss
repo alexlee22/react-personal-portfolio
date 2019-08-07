@@ -1,0 +1,113 @@
+// Colors and Fonts
+$title-font: 'Roboto', sans-serif;
+$content-font: 'Noto Sans', sans-serif;
+$primary-color: #2ba6cb;
+$dark-blue: #10455B;
+$background-white: #ecf0f1;
+$background-black: #000000;
+
+// Media Widths
+$phone-portrate-width: 481px;
+$phone-landscape-width: 767px;
+$tablet-width: 768px;
+$laptop-width: 1025px;
+$desktop-width: 1281px;
+
+// Content Variables
+$container-max-width: $laptop-width;
+$main-padding: 20px;
+$h2-font-size: 3em;
+$h3-font-size: (30em/16);
+
+
+// SASS Import Parameters
+%image-center {
+    background-position: 50%;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+%flexbox-center {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+%container-settings {
+    max-width: $container-max-width;
+    width: 100%;
+}
+
+  
+// Global CSS
+*,
+*::after
+,*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+} 
+html {
+    
+} 
+body {
+    background-color: $background-white;
+    color: $background-black;
+    font-family: $content-font;
+}
+h2 {
+    font-size: 3em;
+    margin: 0.5em 0;
+    @media (min-width: $laptop-width) {
+        text-align: center;
+    }
+}
+h3 {
+    font-size: $h3-font-size;
+    line-height: 1em;
+    margin-bottom: 0.4em;
+    color: $dark-blue;
+}
+h4, a{
+    @media (min-width: $tablet-width) {
+        font-size: 1.2em;
+    }
+}
+ul li {
+    list-style-position: outside;
+    margin-left: 1.25em;
+    line-height: 1.5em;
+    @media (min-width: $tablet-width) {
+        font-size: 1.2em;
+    }
+}
+p {
+    margin-bottom: 10px;
+    @media (min-width: $tablet-width) {
+        font-size: 1.2em;
+    }
+}
+footer {
+    margin-top: 10vmax;
+    text-align: center;
+    color: $background-white;
+}
+main{
+    $margin-small: 15px;
+    $margin-large: 50px;
+    section {
+        margin: $margin-small 0;
+        
+        @media (min-width: $tablet-width) {
+            margin: $margin-large 0;
+        }
+    }
+    section:first-child {
+        margin: 0;
+    }
+    section:last-child {
+        margin-bottom: 0px;
+    }
+}
+
+
+@import 'splash', 'bio', 'toolbox', 'portfolio', 'experience';

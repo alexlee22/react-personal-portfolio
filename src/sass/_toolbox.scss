@@ -1,0 +1,49 @@
+#toolbox {
+    @extend %flexbox-center;
+    padding: $main-padding;
+}
+#toolbox-container {
+    max-width: $container-max-width;
+    width: 100%;
+}
+#toolbox-content {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+
+
+    .tools-container {
+        margin: 10px;
+        width: 100%;
+        border-radius: 5px;
+
+        @media screen and (min-width: $phone-portrate-width) {
+            background-color: white;
+            border: 2px solid $dark-blue;
+            padding: 25px; 
+            flex-grow: 1;
+        }
+
+        @media screen and (min-width: 600px) {
+            max-width: 200px;
+        }
+
+        @media screen and (min-width: $tablet-width) {
+            padding: 25px; 
+            max-width: 250px;
+        }
+    }
+}
+
+.tools-content-heading {
+
+    h3 {
+        margin-left: $h3-font-size - 0.375em;
+    }
+    img {
+        float: left;
+        height: $h3-font-size;
+        width: $h3-font-size;
+    }
+}
