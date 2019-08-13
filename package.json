@@ -13,7 +13,10 @@
     "type": "git",
     "url": "git+https://github.com/xenria/react-personal-portfolio.git"
   },
-  "keywords": ["portfolio", "react"],
+  "keywords": [
+    "portfolio",
+    "react"
+  ],
   "author": "Alexander Lee",
   "license": "ISC",
   "bugs": {
